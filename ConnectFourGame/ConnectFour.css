@@ -1,0 +1,52 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6, 100px);
+    gap: 5px;
+    background-color: #6495ED;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Fix for last column visibility issue */
+    width: fit-content; /* Ensure grid container expands properly */
+  }
+  
+  
+  .cell {
+    position: relative; /* Required for absolute positioning of disk */
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .disk-outer {
+    width: 90px; /* Outer disk size */
+    height: 90px; /* Outer disk size */
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px; /* Initial position outside the grid */
+    left: 5px;
+    transition: top 0.5s ease-in-out; /* Animation */
+  }
+  
+  .disk-inner {
+    width: 80px; /* Inner disk size */
+    height: 80px; /* Inner disk size */
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .player-1 {
+    background-color: #FF6347;
+  }
+  
+  .player-2 {
+    background-color: #FFD700;
+  }
+  
