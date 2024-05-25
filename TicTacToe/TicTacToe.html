@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport configuration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Tic Tac Toe</title>
+    
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Link to custom CSS file for additional styling -->
+    <link rel="stylesheet" href="TicTacToe.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main heading for the game -->
+        <h1 class="text-center">Tic Tac Toe</h1>
+        
+        <!-- Rules section for explaining the game rules -->
+        <div id="rules" class="mb-4">
+            <h3>Rules:</h3>
+            <p>Two players take turns marking empty squares in a 3x3 grid. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.</p>
+        </div>
+        
+        <!-- Button to start the game -->
+        <button id="start-btn" class="btn btn-primary">Start Game</button>
+    </div>
+
+    <!-- Game container that becomes visible when the game starts -->
+    <div id="game-container" class="container d-none">
+        <!-- Message area to display the winner -->
+        <h2 id="winner-msg" class="text-center"></h2>
+        
+        <!-- Board container where the game board will be dynamically generated -->
+        <div id="board" class="text-center">
+            <!-- Game board will be generated dynamically using JavaScript -->
+        </div>
+        
+        <!-- Button to restart the game -->
+        <button id="restart-btn" class="btn btn-secondary">Restart Game</button>
+    </div>
+
+    <!-- Footer section for developer credits -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Developed by @Utsab Baidya</p>
+        </div>
+    </footer>
+
+    <!-- jQuery library for easier JavaScript manipulation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Link to the custom JavaScript file containing game logic -->
+    <script src="TicTacToe.js"></script>
+</body>
+</html>
