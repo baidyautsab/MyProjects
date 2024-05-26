@@ -1,0 +1,96 @@
+/* Default light mode styles */
+body {
+    background-color: #f8f9fa;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+/* Analog clock styling */
+.analog-clock {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #343a40;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    transition: border-color 0.5s, background 0.5s;
+}
+
+.analog-clock::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #343a40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.5s;
+}
+
+/* Clock hands styling */
+.hand {
+    width: 50%;
+    height: 2px;
+    background: #343a40;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease-in-out, background 0.5s;
+}
+
+.hour {
+    height: 4px;
+    background: #fa4e2c;
+}
+
+/* Digital clock and calendar styling */
+.digital-clock, .calendar {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    transition: color 0.5s;
+}
+
+/* To-Do list item priority indicators */
+.list-group-item.low {
+    border-left: 5px solid green;
+}
+
+.list-group-item.medium {
+    border-left: 5px solid orange;
+}
+
+.list-group-item.high {
+    border-left: 5px solid red;
+}
+
+/* Dark mode styles for analog clock */
+.dark-mode .analog-clock {
+    border-color: #f8f9fa;
+    background: #343a40;
+}
+
+.dark-mode .analog-clock::after {
+    background: #f8f9fa;
+}
+
+.dark-mode .hand {
+    background: #f8f9fa;
+}
+
+.dark-mode .hour {
+    background: #fa4e2c;
+}
+
+.dark-mode .digital-clock, .dark-mode .calendar {
+    color: #f8f9fa;
+}
