@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>2048 Game</title>
+    
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Landing page section -->
+        <div class="landing-page" id="landingPage">
+            <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <!-- Game title -->
+                    <h1 class="card-title display-4">2048 Game</h1>
+                    
+                    <!-- Game description -->
+                    <p class="card-text lead">Combine the tiles with the same numbers to reach 2048!</p>
+                    <hr>
+                    
+                    <!-- List of game rules -->
+                    <ul class="list-group list-group-flush text-left">
+                        <li class="list-group-item">Use arrow keys to move the tiles.</li>
+                        <li class="list-group-item">When two tiles with the same number touch, they merge into one!</li>
+                        <li class="list-group-item">Try to reach the 2048 tile.</li>
+                    </ul>
+                    <hr>
+                    
+                    <!-- Start game button -->
+                    <button class="btn btn-primary btn-lg mt-3" onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+            <!-- Footer section -->
+            <footer class="text-center mt-4">
+                <p>Developed by @Utsab Baidya</p>
+            </footer>
+        </div>
+
+        <!-- Game page section, hidden initially -->
+        <div class="game-page" id="gamePage" style="display: none;">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Game title -->
+                    <h2>2048 Game</h2>
+                    
+                    <!-- Score display -->
+                    <div id="score">Score: 0</div>
+                    
+                    <!-- Moves count display -->
+                    <div id="moves">Moves: 0</div>
+                    
+                    <!-- Reset game button -->
+                    <button class="btn btn-danger" onclick="resetGame()">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <!-- Game container for the grid -->
+                    <div class="game-container">
+                        <div class="grid-container">
+                            <!-- Game grid will be dynamically generated here -->
+                        </div>
+                    </div>
+                    <!-- Message display for game over or win -->
+                    <div id="message" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file for game logic -->
+    <script src="game.js"></script>
+</body>
+</html>
