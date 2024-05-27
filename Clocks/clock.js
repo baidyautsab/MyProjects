@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         calendar.innerText = now.toDateString();
     }
 
-    // Function to load tasks from localStorage
+    // Function to load tasks from localStorage 
     function loadTasks() {
         // Retrieve tasks from localStorage, or initialize with an empty array if none exist
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
