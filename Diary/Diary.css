@@ -1,0 +1,12 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  #notepad textarea {
+    resize: none;
+  }
+
+  .form-row{
+    margin-top: 100px;
+  }
+  
