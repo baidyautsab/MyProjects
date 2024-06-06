@@ -14,16 +14,18 @@
   <div class="container h-100 d-flex align-items-center justify-content-center">
     <div id="login" class="text-center">
       <h2>Secure Notepad</h2>
-      <div class="form-row align-items-center justify-content-center">
+      <div class="form-row align-items-center justify-content-center position-relative">
         <div class="col-auto">
           <label class="sr-only" for="password">Password</label>
           <input type="password" id="password" class="form-control mb-2" placeholder="Password">
+          <span id="togglePassword" class="fa fa-fw fa-eye field-icon"></span>
         </div>
         <div class="col-auto">
           <button id="submitPassword" class="btn btn-primary mb-2">Enter</button>
         </div>
       </div>
     </div>
+    <div id="loader">Loading...</div>
 
     <div id="notepad" class="mt-5 d-none w-100 text-center">
       <h2>Your Notes</h2>
@@ -32,7 +34,9 @@
       </div>
       <button id="saveNotes" class="btn btn-success btn-block">Save Notes</button>
       <div id="notesDisplay" class="mt-4">
-        <div class="notes-slider"></div>
+        <div class="notes-slider">
+          <!-- Notes will be dynamically inserted here -->
+        </div>
       </div>
     </div>
   </div>
